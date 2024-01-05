@@ -1,0 +1,137 @@
+@import "./css/reset.scss";
+
+body {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.phone {
+  background-color: black;
+  border-radius: 50px;
+  height: 95%;
+  width: 420px;
+  padding: 50px 20px;
+  box-sizing: border-box;
+}
+
+.header {
+  overflow-x: scroll;
+  .header__list {
+    display: flex;
+    color: white;
+    width: max-content;
+
+    gap: 10px;
+    .header__list-item {
+      border: 1px solid gray;
+      padding: 10px;
+      border-radius: 20px;
+    }
+    .header__list-item:hover {
+      background-color: white;
+      color: black;
+    }
+  }
+}
+
+.cards {
+  margin: 20px 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
+
+  .cards__card {
+    background-color: white;
+
+    border-radius: 15px;
+    padding: 15px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .card__title {
+      font-size: 25px;
+      margin-right: 30px;
+    }
+    .card__footer {
+      font-size: 12.5px;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+
+      .length {
+        padding: 7px 10px;
+        border: 1px solid black;
+        border-radius: 20px;
+        background-color: white;
+      }
+      .price {
+        padding: 7px 10px;
+        border: 1px solid black;
+        border-radius: 20px;
+      }
+    }
+    &:first-child {
+      background-color: #292d33;
+      color: white;
+      border: 1px solid white;
+      .length {
+        color: black;
+      }
+      .price {
+        background-color: #e9affc;
+        color: black;
+      }
+    }
+    &:nth-child(2) {
+      background-color: #f6f4f0;
+      color: black;
+      border: 1px solid white;
+      .price {
+        background-color: #ffdd2c;
+      }
+    }
+    &:nth-child(3) {
+      background-color: #f8fcb1;
+      color: black;
+      border: 1px solid white;
+      .price {
+        background-color: #e9affc;
+      }
+      .card__title {
+        font-size: 35px;
+        margin-right: 50px;
+      }
+    }
+    &:nth-child(4) {
+      background-color: #ad9af5;
+      color: black;
+      border: 1px solid black;
+      .price {
+        background-color: #ffdd2c;
+      }
+    }
+    &:nth-child(5) {
+      background-color: #ffcfcf;
+      color: black;
+      border: 1px solid black;
+      .price {
+        background-color: #e9affc;
+      }
+    }
+    &:nth-child(6) {
+      background-color: #cffedc;
+      color: black;
+      border: 1px solid black;
+      .price {
+        background-color: #ffdd2c;
+      }
+    }
+    &:nth-child(3n) {
+      grid-column: span 2;
+    }
+  }
+}

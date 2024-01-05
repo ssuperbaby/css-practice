@@ -1,0 +1,189 @@
+@import "./css/reset.scss";
+
+body {
+  background-color: #7d4aa9;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.total {
+  width: 1000px;
+  height: 800px;
+  background-color: black;
+  display: grid;
+  color: white;
+  padding: 30px;
+  grid-template-columns: 3fr 3fr 2fr 2fr;
+  grid-template-rows: 2.3fr 2fr 1.8fr;
+
+  .icon {
+    border-radius: 20px;
+
+    &:first-child {
+      padding: 20px;
+      grid-column: 1/3;
+      grid-row: 1/3;
+      background-color: white;
+      color: black;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        font-size: 50px;
+        font-weight: bolder;
+        .header__title {
+          display: flex;
+          font-size: 30px;
+          align-items: center;
+          & div:first-child {
+            padding-right: 15px;
+            font-weight: 100;
+          }
+          & div:last-child {
+            font-size: 15px;
+            background-color: #ffc830;
+            padding: 5px 20px;
+            border-radius: 20px;
+          }
+        }
+      }
+      .img1 {
+        align-self: center;
+        margin-top: -30px;
+        font-size: 200px;
+      }
+      .bottom {
+        align-self: center;
+        font-size: 30px;
+        padding-bottom: 10px;
+        padding-top: 20px;
+        border-top: 1.5px solid black;
+        font-weight: bolder;
+      }
+    }
+
+    &:nth-child(2) {
+      background-image: url(/04/img3.png);
+      background-position: center;
+      background-size: cover;
+    }
+    &:nth-child(3) {
+      padding: 20px;
+      & ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 10px;
+        gap: 15px;
+        font-size: 15px;
+        & li:last-child {
+          margin-top: 90px;
+          font-size: 25px;
+        }
+      }
+    }
+    &:nth-child(4) {
+      display: flex;
+      flex-direction: column;
+      .img3 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 10px;
+        padding: 20px 10px;
+        background-color: #ffc830;
+        border-radius: 20px;
+        color: black;
+      }
+      .img4 {
+        display: flex;
+        justify-content: center;
+        color: black;
+        background-color: white;
+        padding: 15px 10px;
+        font-size: 30px;
+        border-radius: 20px;
+        font-weight: bolder;
+        transform: rotate(10deg);
+      }
+      .TEXT {
+        font-size: 20px;
+        padding: 20px;
+        margin-top: 67px;
+      }
+    }
+    &:nth-child(5) {
+      background-image: url(/04/img1.png);
+      background-position: center;
+      background-size: cover;
+    }
+    &:nth-child(6) {
+      background-image: url(/04/img2.png);
+      background-position: center;
+      background-size: cover;
+    }
+    &:nth-child(7) {
+      padding: 20px;
+      background-image: url(https://source.unsplash.com/random);
+      background-position: center;
+      background-size: cover;
+    }
+    &:last-child {
+      padding: 20px;
+      grid-column: 3/-1;
+      background-color: white;
+      color: black;
+      .top {
+        display: flex;
+        justify-content: space-between;
+        .team1 {
+          display: flex;
+          gap: 10px;
+          & div:first-child {
+            border: 1px solid black;
+            padding: 20px 5px;
+            border-radius: 30px;
+            font-size: small;
+            font-weight: bolder;
+          }
+          & div:last-child {
+            padding: 20px 24px;
+            border-radius: 30px;
+            background-position: center;
+            background-size: cover;
+            background-image: url(https://source.unsplash.com/random);
+          }
+        }
+        .team2 {
+          display: flex;
+          gap: 15px;
+          justify-content: center;
+          align-items: center;
+          & div:first-child {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            font-size: small;
+            font-weight: bolder;
+          }
+          & .title:last-child {
+            border-radius: 30px;
+            background-color: yellow;
+            padding: 10px;
+          }
+        }
+      }
+      .msg {
+        margin-top: 60px;
+        font-weight: bold;
+        font-size: medium;
+      }
+    }
+  }
+}

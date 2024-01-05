@@ -1,0 +1,111 @@
+@import "./css/reset.scss";
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.total {
+  width: 1300px;
+  height: 800px;
+  border: 1.5px solid black;
+  display: grid;
+  grid-template-rows: 2.5fr 1fr 23fr;
+  .header {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr) 1.5fr repeat(5, 1fr);
+    font-size: 16px;
+
+    .header__item {
+      display: flex;
+      border: 1.5px solid black;
+      justify-content: center;
+      align-items: center;
+    }
+    & div:nth-child(6) {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+  .title {
+    border: 1.5px solid black;
+    display: flex;
+    padding: 7px;
+    padding-left: 50px;
+    font-size: 12px;
+
+    & span:first-child {
+      font-weight: bolder;
+    }
+  }
+  section {
+    display: grid;
+    grid-template-columns: 1fr 0.7fr 1fr;
+    grid-template-rows: 1.7fr 1fr;
+    .img {
+      grid-row: 1 /-1;
+      background-size: cover;
+      background-image: url(https://source.unsplash.com/random);
+      background-position: center;
+      border: 1.5px solid black;
+    }
+    .price {
+      grid-column: 2/-1;
+      border: 1.5px solid black;
+      display: flex;
+      flex-direction: column;
+      padding-left: 40px;
+      padding-top: 80px;
+      .price__text1 {
+        padding-bottom: 10px;
+        font-weight: bolder;
+      }
+      .price__text2 {
+        font-size: 60px;
+        font-weight: bolder;
+        padding-bottom: 40px;
+      }
+      .price__text3,
+      .price__text4 {
+        font-size: 45px;
+        font-weight: bolder;
+        & span {
+          color: gray;
+        }
+      }
+      .price__text4 {
+        margin-left: 140px;
+        margin-top: -44px;
+      }
+    }
+  }
+  .explain {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    border: 1.5px solid black;
+    .explain__text1 {
+      margin-top: -10px;
+      padding-bottom: 15px;
+    }
+  }
+  .btn {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    padding-top: 30px;
+    border: 1.5px solid black;
+    font-size: 23px;
+    gap: 10px;
+    font-weight: bolder;
+    .btn_text {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      border-bottom: 1.5px solid black;
+      padding-bottom: 10px;
+    }
+  }
+}
